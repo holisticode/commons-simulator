@@ -24,6 +24,7 @@ import ExpandMore from '@material-ui/icons/ExpandMore'
 
 import { communityAction, hatchAction, abcAction, convictionAction, cadCADAction } from './actions'
 import ForceGraph from './graphs'
+import Heatmap from './heatmap'
 import { serverURI } from './config'
 
 import { useSelector, useDispatch } from 'react-redux'
@@ -421,6 +422,7 @@ const NetworkGraph = ({ results, next }) => {
         </Tooltip>
         </Typography>
         <ForceGraph network={results.network} width={600} height={600} />
+        <Heatmap network={results.network} width={600} height={600} />
         <Next to={next} />
       </Content>
     )
